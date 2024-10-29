@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+}
+
+h1 {
+  text-align: center;
+  margin-block: 40px;
+}
+
+div {
+  display: grid;
+  place-items: center;
+  border: solid 1px black;
+  min-height: 100px;
+  font-size: 3rem;
+  background-color: chocolate;
+}
+
+main {
+  border: solid 1px black;
+  padding: 1em;
+  display: grid;
+  max-width: 80%;
+  min-height: 60svh;
+  margin-inline: auto;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "header header header header"
+    "two two three aside"
+    "five five six aside"
+    "five five seven eight";
+  gap: 0.7em;
+  /* grid-template-rows: 1fr 100px 200px; */
+  /* row-gap: 1em;
+    column-gap: 1em; */
+  /* grid-auto-flow: column; */
+}
+
+#item1 {
+  /* grid-column-start: 1;
+    grid-column-end: 4; */
+  grid-area: header;
+}
+
+#item2 {
+  background-color: blueviolet;
+  /* grid-column: 4/5;
+    grid-row: 1/4; */
+  grid-area: two;
+}
+
+#item3 {
+  background-color: coral;
+  /* grid-column: 1/3;
+    grid-row: 2/4; */
+  grid-area: three;
+}
+
+#item4 {
+  background-color: palevioletred;
+  /* grid-row: 3/4; */
+  grid-area: aside;
+}
+
+#item5 {
+  background-color: blue;
+  grid-area: five;
+}
+
+#item6 {
+  background-color: lawngreen;
+}
+
+#item7 {
+  background-color: black;
+  color: aliceblue;
+  grid-area: seven;
+}
+
+#item8 {
+  background-color: lightseagreen;
+  grid-area: eight;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: aliceblue;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+}
